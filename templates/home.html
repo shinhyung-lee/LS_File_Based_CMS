@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  {% for message in get_flashed_messages() %}
+    <p>{{ message }}</p>    
+  {% endfor %}
+  
+  <ul style="list-style: none;">
+    {% for filename in filenames %}
+      <div style="display: flex; gap: 1em; justify-content: flex-start;">
+        <li>
+          <a href="{{ url_for('serve_file', filename=filename) }}">
+            {{ filename }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('edit_file', filename=filename) }}">Edit</a>
+        </li>
+      </div>
+    {% endfor %}
+  </ul>
+{% endblock %}

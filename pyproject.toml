@@ -8,6 +8,8 @@ packages = [{include = "file_based_cms"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+flask = "^3.1.3"
+markdown = "^3.10.2"
 
 
 [build-system]

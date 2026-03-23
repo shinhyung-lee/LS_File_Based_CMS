@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>File List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
+  </head>
+  <body>
+    <form action="{{ url_for('edit_file', filename=filename) }}" method="post">
+      <div>Edit content of {{ filename }}</div>
+      <textarea name="file_content" id="" value="">{{ content }}</textarea>
+      <button type="submit" style="display: block; margin-top: 1em; padding: 0.3em 1em">Save Changes</button>
+    </form>
+  </body>
+</html>

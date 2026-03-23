@@ -1,0 +1,3 @@
+# Python is...
+
+Python is *awesome* and *fast* and is **pythonic**.
